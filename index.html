@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes Fight Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+         <h1 class ="title">Heroes Fight Game</h1>
+         <div class="buttons-container">
+            <button id="show-heroes-btn" class="show-btn">Show Heroes</button>
+            <button id="start-fight-btn" class="start-btn">Start Fight</button>
+         </div>
+
+         <div class="heroes-container" id="heroes-container">
+            <div class="hero-container">
+                <img class="hero-avatar"  src="assets/batman.jpg" alt="">
+                <span class="hero-name">Batman</span>
+                <div class="hero-details">
+                    <span>xp</span>
+                    <span>Can't Fly</span>
+                    <span>Has Shield</span>
+                </div>
+            </div>
+            <div class="hero-container">
+                <img class="hero-avatar" src="assets/ironman.jpg" alt="">
+                <span class="hero-name">Ironman</span>
+                <div class="hero-details">
+                    <span>xp</span>
+                    <span>Can Fly</span>
+                    <span>Hasn't Shield</span>
+                </div>
+            </div>
+            <div class="hero-container">
+                <img class="hero-avatar" src="assets/spiderman.jpg" alt="">
+                <span class="hero-name">Spiderman</span>
+                <div class="hero-details">
+                    <span>xp</span>
+                    <span>Can Fly</span>
+                    <span>Has Shield</span>
+                </div>
+            </div>
+         </div>
+         <div id="show-winner">
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="functionality.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+body {
+    background-image: url('assets/marvel1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    background-color: #ed1b24;
+}
+
+.title {
+    color: #fff;
+    text-align: center;
+    font-size: 48px;
+    background-color: rgba(1, 1, 1, 0.7);
+    padding: 20px 0;
+    margin: 0 0 40px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+#show-heroes-btn, #start-fight-btn {
+    padding: 20px 30px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.show-btn {
+    background-color: #baacf1;
+}
+
+.start-btn {
+    background-color: #eb999d;
+}
+#start-fight-btn {
+    display: none;  /*ascunde butonul start fight*/
+    
+}
+
+.heroes-container {
+    display: none;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    height: 400px;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+.hero-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    font-weight: lighter;
+    font-size: 18px;
+    gap: 5px;
+}
+
+.hero-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    font-size: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.hero-avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#show-winner {
+    height: 150px;
+    background-color: rgba(255, 255, 255, .7);
+    font-size: 40px;
+    font-weight: 700;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.d-none {
+    display: none!important;
+}
+
+.d-flex {
+    display: flex!important;
+}
+
+.d-block {
+    display: block!important;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+    #show-heroes-btn, #start-fight-btn {
+        font-size: 25px;
+    }
+    .hero-avatar {
+        width: 200px;
+        flex-direction: column;
+    }
+    .hero-name {
+        font-size: 24px;
+    }
+    .hero-container {
+        height: 300px;
+    }
+    .hero-details {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .title {
+        font-size: 36px;
+    }
+    .heroes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #show-winner {
+        height: 200px;
+        margin-top: 100px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    .hero-details {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    #show-winner {
+        height: 100px;
+        margin-top: 40px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    .hero-details {
+        font-size: 22px;
+    }
+}
+/*
+breakpoints mobile max-width: 767px
+breakpoints tablet min-width: 768px and max-width: 1024px
+breakpoints small laptop min-width: 1025px
+
+punctul (.) il folosim pentru clase
+diezul (#) il folosim pentru id-uri
+diferenta  intre id-uri si clase o reprezinta faptul ca intr-un proiect ID-UL ESTE UNIC (se foloseste pentru un singur element) iar CLASELE le folosim pentru oricat de multe elemente dorim
+
+de exemplu: daca am 7 div-uri ce trebuie sa aiba acelasi css (aceeasi stilizare) - vezi exemplul cu hero-container, vom folosi o clasa (declarata in fisierul de css) pentru toate elementele ce trebuie sa arate la fel.
+
+HTML:
+un element poate avea si id si clasa (una sau mai multe)
+<button id='start-btn' clasa='col-red bigger-font btn'>
+
+CSS:
+
+.btn - clasa generala pentru butoane (tot css-ul comun)
+.btn {
+    width: 30px;
+    padding: 20px 30px;
+    font-size: 1em;
+}
+
+.col-red - clasa ce o folosim pentru toate elementele ce dorim sa aiba background rosu
+
+.col-red {
+    background-color: red;
+}
+
+.col-green {
+    background-color: green;
+}
+
+.bigger-font {
+    font-size: 1.5em;
+}
+
+principiul DRY - DON'T REPEAT YOURSELF
+
+JS:
+in manipulare DOM este recomandat sa folosim id-ul
+let startBtn = document.getElementById('start-btn');
+-- ne returneaza doar elementul cu id-ul 'start-btn' - pe cand document.getElementsByClassName('btn') ne returneaza o colectie de elemente cu aceeasi clasa.
+*/
